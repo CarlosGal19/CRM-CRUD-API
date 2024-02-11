@@ -1,4 +1,4 @@
-import { showAlert } from "./functions.js";
+import { showAlert, validateObject } from "./functions.js";
 import { newClient } from "./API.js";
 
 (function () {
@@ -27,9 +27,5 @@ import { newClient } from "./API.js";
         }
 
         newClient(objNewClient);
-    }
-
-    function validateObject(object) {
-        return Object.values(object).every(property => property !== '');
     }
 })();

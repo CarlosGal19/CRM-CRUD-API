@@ -18,5 +18,8 @@ export function showAlert(message) {
             alert.remove();
         }, 3000);
     }
+}
 
+export function validateObject(object) {
+    return Object.values(object).every(property => property !== '');
 }

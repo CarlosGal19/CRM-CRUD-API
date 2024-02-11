@@ -1,26 +1,53 @@
-import { getClientById } from "./API.js";
+import { getClientById, updateClient } from "./API.js";
+import { validateObject, showAlert } from "./functions.js";
 
 (function(){
+
+    const inputName = document.querySelector('#name');
+    const inputEmail = document.querySelector('#email');
+    const inputPhone = document.querySelector('#phone');
+    const inputCompany = document.querySelector('#company');
+    const inputId = document.querySelector('#id');
+
     document.addEventListener('DOMContentLoaded', async () => {
         const urlParameters = new URLSearchParams(window.location.search);
         const clientId = urlParameters.get('id');
         const client = await getClientById(clientId);
 
-        const form = document.querySelector('#form');
-
         showFormData(client);
 
-        // form.addEventListener('submit', validateForm);
+        const form = document.querySelector('#form');
+
+        form.addEventListener('submit', validateForm);
     });
 
     function showFormData(client) {
         const {name, email, phone, company, id } = client;
         console.log(client);
 
-        document.querySelector('#name').value = name;
-        document.querySelector('#email').value = email;
-        document.querySelector('#phone').value = phone;
-        document.querySelector('#company').value = company;
-        document.querySelector('#id').value = id;
+        inputName.value = name;
+        inputEmail.value = email;
+        inputPhone.value = phone;
+        inputCompany.value = company;
+        inputId.value = id;
+    }
+
+    function validateForm(e) {
+        e.preventDefault();
+
+        const objClientUpdated = {
+            name: inputName.value,
+            email: inputEmail.value,
+            phone: inputPhone.value,
+            company: inputCompany.value,
+            id: inputId.value
+        }
+
+        if (!validateObject(objClientUpdated)) {
+            showAlert('All fields are required');
+            return
+        }
+
+        updateClient(objClientUpdated);
     }
 })();
