@@ -14,3 +14,13 @@ export const newClient = async (client) => {
         console.log(error);
     }
 }
+
+export const getClients = async () =>{
+    try {
+        const result = await fetch(url);
+        const data = await result.json();
+        return data;
+    } catch (error) {
+        console.log(error);
+    }
+}

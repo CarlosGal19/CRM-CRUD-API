@@ -1,10 +1,10 @@
 {
   "clients": [
     {
-      "nombre": "Juan NUEVO!",
+      "name": "Juan NUEVO!",
       "email": "correo2@correo.com",
-      "telefono": "12",
-      "empresa": "12212",
+      "phone": "12",
+      "company": "12212",
       "id": "26"
     },
     {
@@ -13,6 +13,13 @@
       "email": "carlosalejandrogalindoislas@gmail.com",
       "phone": "4498066480",
       "company": "Coca Cola"
+    },
+    {
+      "id": "d012",
+      "name": "Mateo",
+      "email": "mendez@gmail.com",
+      "phone": "4491728172",
+      "company": "Yakult"
     }
   ]
 }
