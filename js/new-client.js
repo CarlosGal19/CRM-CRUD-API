@@ -1,3 +1,5 @@
+import { showAlert } from "./functions.js";
+
 (function () {
     const form = document.querySelector('#form');
 
@@ -19,7 +21,7 @@
         }
 
         if (!validateObject(objNewClient)) {
-            console.log('no');
+            showAlert('All fields are required')
             return
         }
 
