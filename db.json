@@ -1,25 +1,18 @@
 {
   "clients": [
     {
-      "name": "Juan NUEVO!",
-      "email": "correo2@correo.com",
-      "phone": "12",
-      "company": "12212",
-      "id": "26"
-    },
-    {
-      "id": "c968",
+      "id": "9a98",
       "name": "Carlos Galindo",
       "email": "carlosalejandrogalindoislas@gmail.com",
       "phone": "4498066480",
       "company": "Coca Cola"
     },
     {
-      "id": "d012",
-      "name": "Mateo",
-      "email": "mendez@gmail.com",
-      "phone": "4491728172",
-      "company": "Yakult"
+      "id": "0ad8",
+      "name": "Carlos Alejandro Galindo Islas",
+      "email": "utm22030587@utma.edu.mx",
+      "phone": "4495120993",
+      "company": "Pepsi"
     }
   ]
 }

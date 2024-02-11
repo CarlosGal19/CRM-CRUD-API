@@ -1,7 +1,11 @@
 import { getClients } from "./API.js";
 
+import { deleteClient } from "./API.js";
+
 (function(){
     const list = document.querySelector('#list-clients');
+
+    list.addEventListener('click', confirmDelete);
 
     document.addEventListener('DOMContentLoaded', showClients);
 
@@ -33,4 +37,17 @@ import { getClients } from "./API.js";
             list.appendChild(row);
         });
     }
+
+    function confirmDelete(e) {
+        if (e.target.classList.contains('delete')) {
+            const clientId = e.target.dataset.client;
+
+            const confirmed = confirm('Do you want to delete this record?');
+
+            if (confirmed) {
+                deleteClient(clientId);
+            }
+        }
+    }
+
 })();
