@@ -10,6 +10,7 @@ import { validateObject, showAlert } from "./functions.js";
     const inputId = document.querySelector('#id');
 
     document.addEventListener('DOMContentLoaded', async () => {
+        // It reads the ID from url to know what client is going to be edited
         const urlParameters = new URLSearchParams(window.location.search);
         const clientId = urlParameters.get('id');
         const client = await getClientById(clientId);
@@ -21,6 +22,7 @@ import { validateObject, showAlert } from "./functions.js";
         form.addEventListener('submit', validateForm);
     });
 
+    // It shows data from client in form to edit them
     function showFormData(client) {
         const {name, email, phone, company, id } = client;
         console.log(client);

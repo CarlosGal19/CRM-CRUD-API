@@ -1,5 +1,6 @@
 const url = 'http://localhost:4000/clients'
 
+// POST
 export const newClient = async (client) => {
     try {
         await fetch(url, {
@@ -15,6 +16,7 @@ export const newClient = async (client) => {
     }
 }
 
+// GET
 export const getClients = async () => {
     try {
         const result = await fetch(url);
@@ -25,6 +27,7 @@ export const getClients = async () => {
     }
 }
 
+// DELETE
 export const deleteClient = async (id) => {
     try {
         await fetch(`${url}/${id}`, {
@@ -35,6 +38,7 @@ export const deleteClient = async (id) => {
     }
 }
 
+// GET (then PUT)
 export const getClientById = async (id) => {
     try {
         const response = await fetch(`${url}/${id}`);
@@ -45,6 +49,7 @@ export const getClientById = async (id) => {
     }
 }
 
+// PUT
 export const updateClient = async (client) => {
     try {
         await fetch(`${url}/${client.id}`, {

@@ -9,6 +9,7 @@ import { deleteClient } from "./API.js";
 
     document.addEventListener('DOMContentLoaded', showClients);
 
+    // It consults the GET method from API to print clients in DOM
     async function showClients() {
         const clients = await getClients();
 
@@ -38,6 +39,7 @@ import { deleteClient } from "./API.js";
         });
     }
 
+    // It asks to user if they really want to delete a client
     function confirmDelete(e) {
         if (e.target.classList.contains('delete')) {
             const clientId = e.target.dataset.client;

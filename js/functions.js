@@ -20,6 +20,7 @@ export function showAlert(message) {
     }
 }
 
+// It validates an object created with form data to know if the form was filled successfully
 export function validateObject(object) {
     return Object.values(object).every(property => property !== '');
 }
