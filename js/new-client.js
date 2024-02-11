@@ -1,4 +1,5 @@
 import { showAlert } from "./functions.js";
+import { newClient } from "./API.js";
 
 (function () {
     const form = document.querySelector('#form');
@@ -25,7 +26,7 @@ import { showAlert } from "./functions.js";
             return
         }
 
-        console.log('yes');
+        newClient(objNewClient);
     }
 
     function validateObject(object) {
