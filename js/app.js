@@ -2,7 +2,7 @@ import { getClients } from "./API.js";
 
 import { deleteClient } from "./API.js";
 
-(function(){
+(function () {
     const list = document.querySelector('#list-clients');
 
     list.addEventListener('click', confirmDelete);

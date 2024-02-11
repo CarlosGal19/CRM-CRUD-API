@@ -1,7 +1,7 @@
 import { getClientById, updateClient } from "./API.js";
 import { validateObject, showAlert } from "./functions.js";
 
-(function(){
+(function () {
 
     const inputName = document.querySelector('#name');
     const inputEmail = document.querySelector('#email');
@@ -24,7 +24,7 @@ import { validateObject, showAlert } from "./functions.js";
 
     // It shows data from client in form to edit them
     function showFormData(client) {
-        const {name, email, phone, company, id } = client;
+        const { name, email, phone, company, id } = client;
         console.log(client);
 
         inputName.value = name;

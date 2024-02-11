@@ -22,8 +22,8 @@ import { newClient } from "./API.js";
         }
 
         if (!validateObject(objNewClient)) {
-            showAlert('All fields are required')
-            return
+            showAlert('All fields are required');
+            return;
         }
 
         newClient(objNewClient);
